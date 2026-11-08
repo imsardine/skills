@@ -6,7 +6,7 @@ Status: Design agreed on 2026-10-29; refined through subsequent review.
 
 Provide a reusable skill for creating new Joplin plugin projects. Feature implementation, existing-plugin repair, upgrades, and publishing are separate tasks.
 
-The [skill](../skills/joplin-plugin-scaffold/SKILL.md) owns the execution workflow and completion criteria. Its [generator reference](../skills/joplin-plugin-scaffold/references/generator.md) owns version-sensitive technical findings and official source links. This record explains the choices behind that workflow.
+The [skill](../../../skills/joplin-plugin-scaffold/SKILL.md) owns the execution workflow and completion criteria. Its [generator reference](../../../skills/joplin-plugin-scaffold/references/generator.md) owns version-sensitive technical findings and official source links. This record explains the choices behind that workflow.
 
 ## Design decisions
 
@@ -30,7 +30,7 @@ Names and descriptions deserve thought, but settling branding is not a prerequis
 
 The initial README should say what is known about the plugin's purpose, without turning into a report about scaffolding or naming deliberations. A short introduction is enough when information is limited.
 
-Project-level agent guidance carries documentation and publication expectations into future development. The [output template](../skills/joplin-plugin-scaffold/assets/AGENTS.md) owns those instructions. Integrating it into existing guidance preserves decisions that preceded scaffolding and lets future agents work without this skill installed.
+Project-level agent guidance carries documentation and publication expectations into future development. The [output template](../../../skills/joplin-plugin-scaffold/assets/AGENTS.md) owns those instructions. Integrating it into existing guidance preserves decisions that preceded scaffolding and lets future agents work without this skill installed.
 
 ## Delivery choices
 
