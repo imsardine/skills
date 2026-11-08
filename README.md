@@ -4,18 +4,22 @@ A coding-agent skill for creating Joplin plugin projects with the official gener
 
 ## Use the skill
 
-Clone this repository and open it in your coding agent. Ask the agent to read the skill and create a project in a new directory, for example:
+Keep a clone of this repository wherever you store skills. Start your coding agent from the plugin project's working directory, where you may already have discussed its design. Ask the agent to read the external skill and scaffold in the current directory:
 
 ```text
-Read and follow skills/joplin-plugin-scaffold/SKILL.md.
+Read and follow /path/to/skill-joplin-plugin/skills/joplin-plugin-scaffold/SKILL.md.
 
-Create a Joplin plugin project in /tmp/note-link-review.
+Scaffold the Joplin plugin in the current working directory.
 Its purpose is to help users review links between notes.
 ```
 
-From another working directory, provide the absolute path to the skill's `SKILL.md` instead. Keep the entire skill folder available so the agent can read its references and copy its assets.
+Replace `/path/to/skill-joplin-plugin` with the location of your clone. Keep the entire skill folder available so the agent can read its references and copy its assets. The skill's location is independent of the plugin's working directory.
+
+The skill reads existing planning documents in the project, reuses decisions, and integrates README and agent guidance while preserving existing content.
 
 Project creation requires Git, Node.js, npm, and access to the official generator and package dependencies. The agent checks toolchain compatibility before generation. Provide any naming or metadata preferences with your request; otherwise it can infer initial values from the plugin's purpose.
+
+Start with a clean Git status. Commit or stash existing work, including untracked files when applicable, before scaffolding. The agent will wait for you to handle existing changes rather than stage or stash them for you.
 
 ## What you get
 
@@ -43,7 +47,7 @@ This lets you review what the agent changed or added after generation.
 
 ## Test and contribute
 
-Test scaffolding in a fresh agent session with a new destination directory. Check the generated README, metadata, unchanged starter code, Git diff, and build artifact. Then open a separate session in the generated project to check whether its `AGENTS.md` guides subsequent development.
+Test scaffolding in a fresh agent session whose working directory is a test plugin project. Reference the skill by its external path. Check the generated README, metadata, unchanged starter code, Git diff, and build artifact. Then open a separate session in that project to check whether its `AGENTS.md` guides subsequent development.
 
 Report issues with this skill in the [upstream issue tracker](https://github.com/imsardine/skill-joplin-plugin/issues). Fork maintainers can track their own work in their fork's Issues; the repository guidance resolves that target from Git remotes.
 
