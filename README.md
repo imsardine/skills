@@ -7,6 +7,7 @@ A collection of reusable skills for a range of tasks.
 | Skill | Purpose | Documentation |
 | --- | --- | --- |
 | [joplin-plugin-scaffold](skills/joplin-plugin-scaffold/SKILL.md) | Create a Joplin plugin project with the official generator and guidance for future development. | [Usage](docs/skills/joplin-plugin-scaffold/usage.md) |
+| [Learn English after chat](skills/learn-english-after-chat/SKILL.md) | Learn natural American English from a conversation, with explanations in Traditional Chinese. | [Usage](docs/skills/learn-english-after-chat/usage.md) |
 
 ## Repository layout
 
