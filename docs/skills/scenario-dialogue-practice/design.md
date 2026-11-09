@@ -33,6 +33,7 @@ IPA represents speech sounds across spoken languages; it is not an English-only 
 - The learner plays both dialogue roles and practices expressing every line in the target language.
 - The system presents one native-language line at a time, labeled with the current role, such as `Clerk: [native-language line]`.
 - After the learner attempts that line, the system presents the next role's native-language line according to the dialogue plan.
+- After setup, ordinary practice replies contain only the next cue's progress marker, role name, and native-language line. Record answers silently. All response commentary belongs in the final learning material: praise and identifying a possible issue for later discussion still evaluate the answer and interrupt practice. Echoing answers and record-keeping acknowledgments are also omitted. Explicit session controls retain their behavior below.
 - Target-language reference lines are revealed in the final learning material. System-supplied target-language dialogue during practice could reveal vocabulary or sentence patterns for subsequent attempts.
 - Final learning material covers both roles because both roles' lines are learner practice turns.
 
@@ -64,6 +65,10 @@ IPA represents speech sounds across spoken languages; it is not an English-only 
 Follow the approach of [learn-english-after-chat](../learn-english-after-chat/design.md): preserve actual learner wording, explain meaningful differences, offer natural expressions, and deliver a standalone Markdown file. This skill is self-contained and does not require loading the other skill at runtime.
 
 Each attempted line includes the role and original native-language cue, verbatim learner response, target-language reference expression, and explanations in the native language. Use native-language portions as vocabulary practice targets, adding corresponding target-language expressions, IPA, usage, and examples. Identify already-natural responses without inventing errors, and accept equivalent expressions rather than requiring an exact reference match.
+
+Quote the full native-language line exactly as displayed during practice in its own labeled field before the learner's response. A scenario heading or topic summary cannot replace this line: the learner needs the actual prompt to compare the intended meaning, their attempt, and the reference expression.
+
+Every completed or early-ended round delivers an actual UTF-8 `.md` file with the full learning material and a downloadable file link or attachment. An in-chat review alone is insufficient. Verify the saved artifact before linking it; report any unavailable file-delivery capability without inventing a download link.
 
 ## Packaging
 

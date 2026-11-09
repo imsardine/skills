@@ -26,16 +26,16 @@ Each prompt contains a progress marker, a role, and one native-language dialogue
 你想喝什麼？
 ```
 
-Respond in the target language, using native-language wording wherever needed. The next prompt advances to the next role's planned line regardless of mistakes. Reference answers and corrections come after practice.
+Respond in the target language, using native-language wording wherever needed. The next prompt advances to the next role's planned line regardless of mistakes. After each non-final answer, the agent replies only with the next cue's progress marker, role, and native-language line. It records your answer silently, without repeating it or adding acknowledgments, praise, or comments about possible errors. All feedback, including reference answers and corrections, comes after practice.
 
 There is no help or skip option: use your native language to complete the attempt instead. You may explicitly end early. Changing the scenario ends the current round and produces its learning material before starting a new round.
 
 ## After practice
 
-The agent creates and links a standalone Markdown file automatically. It contains:
+After normal completion or an early ending, the agent automatically creates a standalone `.md` file and provides a downloadable link or file attachment. A review displayed in chat does not replace the downloadable file. It contains:
 
 - The scenario, language settings, roles, and completed/planned count.
-- Each attempted cue with your response preserved verbatim.
+- Each role's full native-language line quoted exactly as shown during practice, followed by your response preserved verbatim. The original line appears in its own labeled field, even if the entry also has a scenario or topic heading.
 - A natural target-language reference expression and explanations in your native language.
 - Vocabulary notes for native-language portions, with target-language IPA, usage, and examples.
 

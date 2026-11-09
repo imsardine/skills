@@ -18,7 +18,7 @@ The learner plays both roles in a planned dialogue. Present one native-language 
 
 ## Run the practice
 
-Present each cue using a progress marker, role name, and native-language dialogue line. Translate role labels into the native language. For example, with a Chinese native language:
+For ordinary practice turns after setup, the entire learner-facing reply contains only the next cue: a progress marker, role name, and native-language dialogue line. Translate role labels into the native language. For example, with a Chinese native language:
 
 ```text
 1/10 · 店員
@@ -26,9 +26,9 @@ Present each cue using a progress marker, role name, and native-language dialogu
 ```
 
 - Present exactly one cue at a time. Both roles' lines are learner tasks; the system does not supply a target-language counterpart line.
-- Record the role, exact cue, and actual learner response for each attempt. Preserve mixed-language wording, spelling, punctuation, and line breaks for the final document.
+- Record the role, exact cue, and actual learner response silently for the final document. Preserve mixed-language wording, spelling, punctuation, and line breaks without echoing the response during practice.
 - After a response, advance to the next planned cue regardless of correctness, fluency, or meaning. A partial or entirely native-language response also counts as an attempt. Keep the planned dialogue unchanged by mistakes.
-- During practice, provide the next native-language cue without corrections, evaluations, target-language reference answers, or vocabulary hints.
+- Reserve all commentary on responses for the final learning material, including praise, correctness or naturalness judgments, corrections, explanations, reference answers, and vocabulary hints. Pointing out a possible issue while promising to discuss it later is also commentary and must wait until practice ends. Omit acknowledgments such as "answer recorded"; after a non-final attempt, reply with only the next cue.
 - Help and skipping are unavailable. If the learner explicitly requests either, retain the current cue and remind them in their native language to answer using native-language wording for anything they cannot express. A control request is not an attempted dialogue line.
 - Distinguish explicit session instructions from dialogue content: a character's line meaning "I don't know" or "goodbye" can be a normal attempt rather than a help request or an instruction to end.
 - If the learner explicitly ends early, stop prompting and produce the learning material for attempted lines only. Mark the early ending and completed/planned count; keep unattempted lines unrevealed for possible later practice.
@@ -41,7 +41,7 @@ Write a standalone Markdown document. Identify the scenario, roles, native langu
 
 For every attempted line, in dialogue order, include:
 
-1. The role and original native-language cue.
+1. The role and the full original native-language line, quoted verbatim exactly as displayed during practice, under its own native-language label. Place this before the learner's response. A scenario title, topic summary, or paraphrase is not a substitute for the actual line.
 2. The learner's response verbatim, using Markdown-safe quoting or fencing while retaining its text and line breaks.
 3. A natural target-language reference expression conveying the cue's intended meaning in context.
 4. An explanation in the native language addressing meaningful differences between the response and the reference: word choice, grammar, register, tone, sentence structure, or contextual meaning, as relevant.
@@ -59,4 +59,8 @@ Use headings and explanations in the native language. Keep target-language refer
 
 ## Deliver
 
-Save the `.md` file to the learner's requested destination, or use a descriptive filename in the current workspace. Avoid unintentionally overwriting an existing file. Link the finished document in the final response and briefly report the completed/planned count.
+Before saving, verify that every attempted line includes its exact displayed native-language cue alongside the learner's response and reference expression, subject to the history-availability limitation above.
+
+For every completed or early-ended round, actually create a UTF-8 `.md` file containing the full learning material. Save it to the learner's requested destination, or use a descriptive filename in the current workspace. Avoid unintentionally overwriting an existing file.
+
+Verify that the saved file exists and contains the learning material, then provide a downloadable file link or attachment using the current environment's supported delivery mechanism. Briefly report the completed/planned count. An in-chat review, Markdown code block, or filename alone does not fulfill delivery. If file creation or download delivery is unavailable, state that limitation explicitly rather than claiming a downloadable artifact exists.
