@@ -70,6 +70,16 @@ Quote the full native-language line exactly as displayed during practice in its 
 
 Every completed or early-ended round delivers an actual UTF-8 `.md` file with the full learning material and a downloadable file link or attachment. An in-chat review alone is insufficient. Verify the saved artifact before linking it; report any unavailable file-delivery capability without inventing a download link.
 
+### Sentence listening
+
+Let the learner choose Google Translate, Bing Translator, LazyPy, or Yandex Translate for sentence listening. Default to Google Translate and identify it briefly during setup without requiring a separate selection. The learner found Google's pronunciation suitable; translation quality is separate because the skill supplies the exact target-language expression to pronounce. The service may be changed later.
+
+Each reference expression, optional alternative, and complete vocabulary example sentence links to the selected service, with the exact expression encoded in its URL. Translate-page links use the practiced target language for the original input and the learner's native language for the translated output. The learner presses the original-text speaker button; LazyPy instead uses a selected backend and voice with its play button. Google's [listening instructions](https://support.google.com/translate/answer/6142468) describe the default service's playback interaction. The skill neither generates nor attaches MP3 files and does not use any service's translation output as a reference answer.
+
+Render reference expressions as blockquotes with the `🔊` listening link immediately after the expression on the same Markdown line and in the same paragraph: `> Suggested expression. [🔊](URL)`. Optional alternatives and vocabulary example sentences also keep their links inline beside the corresponding expression. This preserves the immediate association between the suggested wording and its audio entry point.
+
+Keep links in the final learning material so practice cues do not reveal reference expressions. The selected service controls playback availability and regional voice selection; only claim a specific accent when that service supports selecting it. Reference wording and IPA still follow the round's selected pronunciation variety. Do not equate translation-language coverage with speech support. If a language or voice is unavailable, explain the limitation and let the learner choose another service.
+
 ## Packaging
 
 Keep execution instructions in one `SKILL.md` with UI metadata in `agents/openai.yaml`. No scripts, external skill dependencies, or output templates are needed. Repository documentation is written in English; practice and learning explanations follow the learner's native language.
