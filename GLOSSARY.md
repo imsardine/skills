@@ -47,3 +47,14 @@ The learner's actual attempt to express a cue, including any native-language wor
 
 **Learning material**:
 A post-dialogue resource explaining how to express the dialogue's intended meanings in context and addressing the learner's actual responses.
+
+### English learning from notes
+
+**Learning item**:
+A reusable English word, expression, or sentence pattern identified from marked original text, with repeated occurrences consolidated into one practice item.
+
+**Follow-up question**:
+A learner's supplementary thought or question about a learning item, considered together with its original context and practice explanations.
+
+**Practice section**:
+The note's single collection of learning-item explanations and bilingual dialogue examples, ordered by the items' first appearance in the original text.
